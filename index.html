@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.jpg">
+</head>
+
+<body>
+    <div class="modal" id="modal" data-state="inactive">
+        <div class="modal-content">
+            <ul class="suggestions" id="modal-suggestions">
+            </ul>
+            <div class="modal-buttons">
+                <input id="modal-replace-btn" class="button" name="" type="button" value="replace" />
+                <input id="modal-merge-btn" class="button" name="" type="button" value="merge" />
+                <input id="modal-cancel-btn" class="button" name="" type="button" value="cancel" />
+            </div>
+        </div>
+    </div>
+    <img class="background">
+    <main>
+        <!-- <input id="input-title" type="text" class="title"> -->
+        <span id="span-title" class="title" role="textbox" contenteditable></span>
+        <form class="search-bar-wrapper" id="search-bar-form" action="http://google.com/search">
+            <div class="row">
+                <img class="icon" src="./icon_search.svg" alt="">
+                <input type="text" name="q" autocomplete="off" autofocus spellcheck="false" placeholder="Search..."
+                    id="search-input" class="search-input" />
+                <input class="plus" type="button" value="+" id="search-plus-btn" data-state="hidden">
+            </div>
+            <ul class="suggestions" id="search-suggestions-list">
+            </ul>
+        </form>
+    </main>
+    <footer>
+        <h2>Hidden Area</h2>
+        <div class="buttons">
+            <label class="choose-file button" for="footer-import">import</label>
+            <input id="footer-import" value="import" type="file" style="display: none">
+            <button class="button" id="footer-export">export</button>
+        </div>
+    </footer>
+
+    <template id="temp-suggestion">
+        <li class="suggestion row">
+            <img class="icon" src="./icon_search.svg" alt="">
+            <a href="#"><span></span></a>
+            <input class="delete-btn" type="button" value="del" data-state='remove'>
+        </li>
+    </template>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
