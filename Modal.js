@@ -81,11 +81,13 @@ export default class Modal {
 			setState(MODAL_STATE.inactive)
 			SUGGESTIONS.merge(MODAL_SUGGESTIONS.suggestions)
 			SUGGESTIONS.save()
+			location.reload()
 		})
 		replaceBtn.addEventListener('click', () => {
 			setState(MODAL_STATE.inactive)
 			SUGGESTIONS.replace(MODAL_SUGGESTIONS.suggestions)
 			SUGGESTIONS.save()
+			location.reload()
 		})
 		cancelBtn.addEventListener('click', () => {
 			setState(MODAL_STATE.inactive)
